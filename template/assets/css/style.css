@@ -1719,3 +1719,7 @@ a {
     padding-right: 10rem;
   }
 }
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
