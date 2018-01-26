@@ -3,8 +3,8 @@ $(document).ready(function($) {
 	"use strict";
 
 	var loader = function() {
-		
-		setTimeout(function() { 
+
+		setTimeout(function() {
 			if($('#pb_loader').length > 0) {
 				$('#pb_loader').removeClass('show');
 			}
@@ -22,19 +22,19 @@ $(document).ready(function($) {
 
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+					navbar.addClass('scrolled');
 				}
-			} 
+			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
 				}
-			} 
+			}
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					navbar.addClass('awake');
 				}
-				
+
 				if(sd.length > 0) {
 					sd.addClass('sleep');
 				}
@@ -51,7 +51,7 @@ $(document).ready(function($) {
 		});
 	};
 	scrollWindow();
-	
+
 	// slick sliders
 	var slickSliders = function() {
 		$('.single-item').slick({
@@ -86,7 +86,7 @@ $(document).ready(function($) {
 		  slidesToScroll: 1,
 		  dots: true,
 		  infinite: true,
-		  
+
 		  autoplay: true,
 	  	autoplaySpeed: 2000,
 
@@ -163,7 +163,7 @@ $(document).ready(function($) {
 
 	// navigation
 	var OnePageNav = function() {
-		$(".smoothscroll[href^='#'], #probootstrap-navbar ul li a[href^='#']").on('click', function(e) {
+		$(".smoothscroll[href^='#'], #boot-navbar ul li a[href^='#']").on('click', function(e) {
 		 	e.preventDefault();
 		 	var hash = this.hash,
 		 			navToggler = $('.navbar-toggler');
@@ -203,17 +203,4 @@ $(document).ready(function($) {
 		})
 	};
 	offCanvasNav();
-
-	var ytpPlayer = function() {
-		if ($('.ytp_player').length > 0) { 
-			$('.ytp_player').mb_YTPlayer();	
-		}
-	}
-	ytpPlayer();
-
-
-	
-
-
 });
-
