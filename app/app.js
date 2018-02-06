@@ -15,6 +15,9 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
+// Import Bootstrap css
+import 'bootstrap/dist/css/bootstrap.css';
+
 // Import root app
 import App from 'containers/App';
 
