@@ -41,7 +41,9 @@ function HomeAbout() {
           <div className="row">
             <div className="col-md">
               <div className="media pb_media_v2 d-block text-center mb-3">
-                <div className="icon border border-icon rounded-circle d-block mr-3 display-4 mx-auto mb-4"><i className="flaticon text-icon"><FontAwesomeIcon icon={faGraduationCap} /></i></div>
+                <div className="icon border border-icon rounded-circle d-block mr-3 display-4 mx-auto mb-4">
+                  <i className="flaticon text-icon"><FontAwesomeIcon icon={faGraduationCap} /></i>
+                </div>
                 <div className="media-body">
                   <h3 className="mt-0 pb_font-20">Workshops</h3>
                   <p>Our club hosts a variety workshops each quarter ranging from interview preparation to ios development.</p>
@@ -50,7 +52,9 @@ function HomeAbout() {
             </div>
             <div className="col-md">
               <div className="media pb_media_v2 d-block text-center  mb-3">
-                <div className="icon border border-icon rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i className="flaticon text-icon"><FontAwesomeIcon icon={faHandshake} /></i></div>
+                <div className="icon border border-icon rounded-circle d-flex mr-3 display-4 mx-auto mb-4">
+                  <i className="flaticon text-icon"><FontAwesomeIcon icon={faHandshake} /></i>
+                </div>
                 <div className="media-body">
                   <h3 className="mt-0 pb_font-20">Socials</h3>
                   <p>Come to socials for fun and conversation. Past events include De-Stressers, Byte/Bit, and the Demo Day showcase.</p>
@@ -59,7 +63,9 @@ function HomeAbout() {
             </div>
             <div className="col-md">
               <div className="media pb_media_v2 d-block text-center  mb-3">
-                <div className="icon border border-icon rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i className="flaticon text-icon"><FontAwesomeIcon icon={faUsers} /></i></div>
+                <div className="icon border border-icon rounded-circle d-flex mr-3 display-4 mx-auto mb-4">
+                  <i className="flaticon text-icon"><FontAwesomeIcon icon={faUsers} /></i>
+                </div>
                 <div className="media-body">
                   <h3 className="mt-0 pb_font-20">Open to All</h3>
                   <p>You don{'\''}t have to be computer sicence major; we invite everyone who is interested in technology!</p>

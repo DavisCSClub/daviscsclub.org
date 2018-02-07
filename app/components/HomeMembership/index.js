@@ -10,7 +10,6 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
 import faMinus from '@fortawesome/fontawesome-free-solid/faMinus';
 
-
 import '!file-loader?name=[name].[ext]&outputPath=home/!../../images/home/member1.jpg';
 import '!file-loader?name=[name].[ext]&outputPath=home/!../../images/home/member2.jpg';
 
@@ -31,7 +30,6 @@ class HomeMembership extends React.PureComponent { // eslint-disable-line react/
   isVisible(tab) {
     return this.state.accordionVisible === tab;
   }
-
 
   render() {
     return (
