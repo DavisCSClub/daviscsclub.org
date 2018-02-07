@@ -1,5 +1,0 @@
-# Overridden by the --ignore-path in package.json when running scripts
-# This file is included for the sake of editors not aware of that script config option
-
-internals/scripts
-template/**/*.js
