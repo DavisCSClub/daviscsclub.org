@@ -16,6 +16,7 @@ import HomeAbout from 'components/HomeAbout';
 import HomeMembership from 'components/HomeMembership';
 import HomeEvents from 'components/HomeEvents';
 import HomeOfficers from 'components/HomeOfficers';
+import HomeContact from 'components/HomeContact';
 
 import './helpers.css';
 import './style.css';
@@ -29,6 +30,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <HomeMembership />
         <HomeEvents />
         <HomeOfficers />
+        <HomeContact />
       </div>
     );
   }
