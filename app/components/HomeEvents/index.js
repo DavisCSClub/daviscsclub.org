@@ -31,7 +31,7 @@ const sliderSettings = {
 
 function HomeEvents() {
   return (
-    <section className="pb_section pb_bg-half" data-section="upcoming-events" id="section-upcoming-events">
+    <section className="pb_section pb_bg-half" id="section-upcoming-events">
       <div className="container">
         <div className="row justify-content-md-center text-center mb-5">
           <div className="col-lg-7">

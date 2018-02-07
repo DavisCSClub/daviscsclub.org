@@ -15,8 +15,8 @@ import '!file-loader?name=[name].[ext]&outputPath=home/!../../images/home/who2.j
 
 function HomeAbout() {
   return (
-    <div>
-      <section className="pb_section pb_section_v1" data-section="about" id="section-about">
+    <div id="section-about">
+      <section className="pb_section pb_section_v1">
         <div className="container">
           <div className="row">
             <div className="col-lg-5 pr-md-5 pr-sm-0">

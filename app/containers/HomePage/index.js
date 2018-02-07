@@ -11,6 +11,7 @@
 
 import React from 'react';
 
+import HomeNav from 'components/HomeNav';
 import HomeHero from 'components/HomeHero';
 import HomeAbout from 'components/HomeAbout';
 import HomeMembership from 'components/HomeMembership';
@@ -26,6 +27,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     return (
       <div>
+        <HomeNav />
         <HomeHero />
         <HomeAbout />
         <HomeMembership />

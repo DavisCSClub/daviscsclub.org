@@ -8,7 +8,7 @@ import React from 'react';
 
 function HomeContact() {
   return (
-    <section className="pb_section" data-section="contact" id="section-contact">
+    <section className="pb_section" id="section-contact">
       <div className="container">
 
         <div className="row justify-content-md-center text-center mb-5">

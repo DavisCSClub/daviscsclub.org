@@ -33,7 +33,7 @@ class HomeMembership extends React.PureComponent { // eslint-disable-line react/
 
   render() {
     return (
-      <section className="pb_section" data-section="membership" id="section-membership">
+      <section className="pb_section" id="section-membership">
         <div className="container">
           <div className="row justify-content-md-center text-center mb-5">
             <div className="col-lg-7">

@@ -12,7 +12,7 @@ import '!file-loader?name=[name].[ext]&outputPath=home/!../../images/home/generi
 function HomeOfficers() {
   // Background-image should be around 1900x1200 ratio
   return (
-    <section className="pb_section bg-light bg-image with-overlay" data-section="officers" id="section-officers" style={{ backgroundImage: 'url(home/board.jpg)', backgroundSize: 'cover' }}>
+    <section className="pb_section bg-light bg-image with-overlay" id="section-officers" style={{ backgroundImage: 'url(home/board.jpg)', backgroundSize: 'cover' }}>
       <div className="container-fluid">
         <div className="row justify-content-md-center text-center mb-5">
           <div className="col-lg-7">

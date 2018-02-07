@@ -1148,7 +1148,7 @@ a {
         color: #212529 !important; }
         .pb_navbar.scrolled.pb_scrolled-light ul li a:hover, .pb_navbar.scrolled.pb_scrolled-light ul li a:active, .pb_navbar.scrolled.pb_scrolled-light ul li a:focus {
           color: #868e96 !important; }
-        .pb_navbar.scrolled.pb_scrolled-light ul li a.active {
+        .pb_navbar.scrolled.pb_scrolled-light ul li.active a {
           color: #1d82ff !important; }
       .pb_navbar.scrolled.pb_scrolled-light ul li.cta-btn > a > span {
         border: none;
@@ -1723,6 +1723,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #212529;
   line-height: 1.1;
+}
+
+nav {
+  font-weight: 300;
+}
+
+.navbar {
+  padding: 1rem 1rem;
+}
+
+.nav-link {
+  padding: 2rem 1rem;
 }
 
 .btn {
