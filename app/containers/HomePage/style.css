@@ -1465,20 +1465,21 @@ a {
       .pb_half#map {
         height: 300px; } }
 
-.pb_accordion .item > a {
+.pb_accordion .item > button {
   display: block;
   border-bottom: 1px solid #e9ecef;
   padding: 10px 0;
+  width: 100%;
+  line-height: 1.8;
   position: relative;
   color: #495057; }
-  .pb_accordion .item > a:after {
+  .pb_accordion .item > button > svg {
     position: absolute;
     right: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-family: 'FontAwesome';
     speak: none;
     font-size: 14px;
     font-style: normal;
@@ -1487,13 +1488,10 @@ a {
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f067"; }
-  .pb_accordion .item > a[aria-expanded="true"] {
+    -moz-osx-font-smoothing: grayscale; }
+  .pb_accordion .item > button[aria-expanded="true"] {
     color: #1d82ff;
     border-bottom: 1px solid transparent; }
-    .pb_accordion .item > a[aria-expanded="true"]:after {
-      content: "\f068"; }
 
 .pb_accordion .item > div *:last-child {
   margin-bottom: 0; }
@@ -1737,4 +1735,10 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   font-weight: 300;
   line-height: 1.25;
+}
+
+.anchor-button {
+  text-align: left;
+  white-space: normal;
+  text-decoration: none !important;
 }
