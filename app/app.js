@@ -18,10 +18,11 @@ import createHistory from 'history/createBrowserHistory';
 // Import Bootstrap css
 import 'bootstrap/dist/css/bootstrap.css';
 
-// Import root app
+// Import root app and auth
 import App from 'containers/App';
+import Auth from 'containers/Auth/Auth';
 
-// Load the favicon, the manifest.json file and the .htaccess file
+// Load the favicon, manifest.json, .htaccess, and cross-origin auth fallback page
 /* eslint-disable import/no-unresolved, import/extensions */
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import '!file-loader?name=[name].[ext]!./images/icon-72x72.png';
@@ -34,6 +35,7 @@ import '!file-loader?name=[name].[ext]!./images/icon-384x384.png';
 import '!file-loader?name=[name].[ext]!./images/icon-512x512.png';
 import '!file-loader?name=[name].[ext]!./manifest.json';
 import 'file-loader?name=[name].[ext]!./.htaccess';
+import 'file-loader?name=[name].[ext]!./cross-auth-fallback.html'; // TODO: check if works, webpack seems to be modifying it
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';
@@ -44,11 +46,14 @@ const history = createHistory();
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
 
+// Init Auth
+const auth = new Auth(store);
+
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <App auth={auth} />
       </ConnectedRouter>
     </Provider>,
     MOUNT_NODE

@@ -12,18 +12,24 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
-export default function App() {
+export default function App({ auth }) {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" render={(props) => <HomePage auth={auth} {...props} />} />
+        <Route exact path="/account" component={NotFoundPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
   );
 }
+
+App.propTypes = {
+  auth: PropTypes.object.isRequired,
+};
