@@ -11,9 +11,9 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  id_token: '',
-  access_token: '',
-  expires_at: '',
+  idToken: '',
+  accessToken: '',
+  expiresAt: '',
 });
 
 function authReducer(state = initialState, action) {

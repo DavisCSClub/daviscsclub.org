@@ -28,6 +28,10 @@ const ReactBoilerplate = {
         'ip',
         'minimist',
         'bootstrap',
+        'body-parser',
+        'express-jwt',
+        'jwks-rsa',
+        'dotenv',
       ],
 
       /**
