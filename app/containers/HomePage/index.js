@@ -11,6 +11,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
 import HomeNav from 'components/HomeNav';
 import HomeHero from 'components/HomeHero';
@@ -21,10 +23,21 @@ import HomeOfficers from 'components/HomeOfficers';
 import HomeContact from 'components/HomeContact';
 import HomeFooter from 'components/HomeFooter';
 
+import injectSaga from 'utils/injectSaga';
+import injectReducer from 'utils/injectReducer';
+import { loadMemberCards } from './actions';
+import reducer from './reducer';
+import saga from './saga';
+
 import './helpers.css';
 import './style.css';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.props.loadMemberCards();
+  }
+
   render() {
     return (
       <div>
@@ -43,4 +56,26 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
 HomePage.propTypes = {
   auth: PropTypes.object.isRequired,
+  loadMemberCards: PropTypes.func.isRequired,
 };
+
+function mapStateToProps(state) {
+  return {
+    homePage: state.homePage,
+  };
+}
+
+const mapDispatchToProps = {
+  loadMemberCards,
+};
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+const withReducer = injectReducer({ key: 'homePage', reducer });
+const withSaga = injectSaga({ key: 'homePage', saga });
+
+export default compose(
+  withReducer,
+  withSaga,
+  withConnect,
+)(HomePage);

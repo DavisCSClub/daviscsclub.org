@@ -30,6 +30,7 @@ AccountPage.propTypes = {
 
 function mapStateToProps(state) {
   return {
+    auth: state.auth,
     accountPage: state.accountPage,
   };
 }
