@@ -21,8 +21,8 @@ export function* setAuthSession(action) {
 export function* loadAuthSession() {
   const expiresAt = localStorage.getItem('expiresAt');
   if (expiresAt && expiresAt > new Date().getTime()) {
-    const idToken = localStorage.getItem('id_token');
-    const accessToken = localStorage.getItem('access_token');
+    const idToken = localStorage.getItem('idToken');
+    const accessToken = localStorage.getItem('accessToken');
     yield put(userCreds(idToken, accessToken, expiresAt));
   } else if (expiresAt) {
     yield put(userLoadFail('Locally stored creds expired'));

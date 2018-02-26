@@ -13,7 +13,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { createStructuredSelector } from 'reselect';
 
+import { makeSelectMembersData } from 'containers/HomePage/selectors';
 import HomeNav from 'components/HomeNav';
 import HomeHero from 'components/HomeHero';
 import HomeAbout from 'components/HomeAbout';
@@ -23,22 +25,18 @@ import HomeOfficers from 'components/HomeOfficers';
 import HomeContact from 'components/HomeContact';
 import HomeFooter from 'components/HomeFooter';
 
-import injectSaga from 'utils/injectSaga';
-import injectReducer from 'utils/injectReducer';
 import { loadMemberCards } from './actions';
-import reducer from './reducer';
-import saga from './saga';
 
 import './helpers.css';
 import './style.css';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  constructor(props) {
-    super(props);
+  componentWillMount() {
     this.props.loadMemberCards();
   }
 
   render() {
+    console.log(this.props.membersData);
     return (
       <div>
         <HomeNav showLogin={this.props.auth.showLogin} />
@@ -57,25 +55,26 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 HomePage.propTypes = {
   auth: PropTypes.object.isRequired,
   loadMemberCards: PropTypes.func.isRequired,
+  membersData: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.bool,
+  ]).isRequired,
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = createStructuredSelector({
+  membersData: makeSelectMembersData(),
+});
+
+function mapDispatchToProps(dispatch) {
   return {
-    homePage: state.homePage,
+    loadMemberCards: () => dispatch(loadMemberCards()),
   };
 }
 
-const mapDispatchToProps = {
-  loadMemberCards,
-};
-
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'homePage', reducer });
-const withSaga = injectSaga({ key: 'homePage', saga });
+// TODO: Figure out why I can't inject the reducer+saga without breaking the reducer and devtools
 
 export default compose(
-  withReducer,
-  withSaga,
   withConnect,
 )(HomePage);

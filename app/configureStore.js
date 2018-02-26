@@ -7,6 +7,7 @@ import { fromJS } from 'immutable';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import authSaga from 'containers/Auth/saga';
+import homePageSaga from 'containers/HomePage/saga';
 import createReducer from './reducers';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -46,6 +47,7 @@ export default function configureStore(initialState = {}, history) {
 
   // Extensions
   sagaMiddleware.run(authSaga); // Authentication Saga
+  sagaMiddleware.run(homePageSaga); // HomePage Saga TODO: remove in favor of inject
   store.runSaga = sagaMiddleware.run;
   store.injectedReducers = {}; // Reducer registry
   store.injectedSagas = {}; // Saga registry
