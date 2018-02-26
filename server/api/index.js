@@ -6,10 +6,6 @@ const restrictedRoutes = require('./restrictedRoutes');
 const publicRoutes = require('./publicRoutes');
 const router = express.Router();
 
-if (!process.env.AUTH0_DOMAIN || !process.env.AUTH0_AUDIENCE) {
-  throw new Error('Make sure you have AUTH0_DOMAIN, and AUTH0_AUDIENCE in your .env file');
-}
-
 const checkJWT = jwt({
   // Dynamically provide a signing key based on the kid in the header and the singing keys provided by the JWKS endpoint.
   secret: jwksClient.expressJwtSecret({
@@ -20,7 +16,7 @@ const checkJWT = jwt({
   }),
 
   // Validate the audience and the issuer.
-  audience: process.env.AUTH0_AUDIENCE,
+  audience: process.env.AUTH0_DCSC_API_AUDIENCE,
   issuer: `https://${process.env.AUTH0_DOMAIN}/`,
   algorithms: ['RS256'],
 });

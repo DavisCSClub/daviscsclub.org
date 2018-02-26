@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/test', (req, res) => {
-  res.json({ success: true });
+router.get('/members', (req, res) => {
+  res.json({ members: [{ name: 'tom1' }] });
 });
 
 module.exports = router;

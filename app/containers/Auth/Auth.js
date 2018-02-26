@@ -9,7 +9,7 @@ import { userLoad, signupSubmit, lockShow, lockHide, loginSubmit, loginSuccess, 
 
 const AUTH_CONFIG = {
   domain: 'dcsc.auth0.com',
-  audience: 'https://daviscsclub.org/api',
+  dcscApiAudience: 'https://daviscsclub.org/api',
   clientId: '0v9ZHz0G7GE2IZ2huQo628Po161BgDYa',
 };
 
@@ -21,7 +21,7 @@ export default class Auth {
       autoclose: true,
       auth: {
         responseType: 'token id_token',
-        audience: AUTH_CONFIG.audience,
+        audience: AUTH_CONFIG.dcscApiAudience,
       },
       theme: {
         // logo: '' // Recommended max height of 58px

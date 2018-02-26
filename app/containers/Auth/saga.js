@@ -8,7 +8,6 @@ export function* setAuthSession(action) {
     const idToken = action.authResult.idToken;
     const accessToken = action.authResult.accessToken;
     const expiresAt = JSON.stringify((action.authResult.expiresIn * 1000) + new Date().getTime());
-    console.log(action.authResult);
     localStorage.setItem('idToken', idToken);
     localStorage.setItem('accessToken', accessToken);
     localStorage.setItem('expiresAt', expiresAt);

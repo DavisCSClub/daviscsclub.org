@@ -15,9 +15,16 @@ const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngr
 const resolve = require('path').resolve;
 const app = express();
 
-
-if (!process.env.MONGODB_URI) {
-  throw new Error('Make sure you have MONGODB_URI in your .env file');
+// Check for missing required env variables
+const REQUIRED_ENV = 'MONGODB_URI AUTH0_DOMAIN AUTH0_DCSC_API_AUDIENCE AUTH0_NON_CLIENT_ID AUTH0_NON_CLIENT_SECRET'.split(' ');
+let MISSING_ENV = '';
+REQUIRED_ENV.forEach((env) => {
+  if (!process.env[env]) {
+    MISSING_ENV += `${env}, `;
+  }
+});
+if (MISSING_ENV) {
+  throw new Error(`Missing required env var ${MISSING_ENV} in your .env file`);
 }
 
 // Connect to MongoDB
@@ -28,7 +35,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // API routes
 app.use('/api', apiRoutes);
-
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
