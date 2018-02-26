@@ -17,14 +17,14 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import AccountPage from 'containers/AccountPage/Loadable';
+// import AccountPage from 'containers/AccountPage/Loadable';
 
 export default function App({ auth }) {
   return (
     <div>
       <Switch>
         <Route exact path="/" render={(props) => <HomePage auth={auth} {...props} />} />
-        <Route exact path="/account" component={AccountPage} />
+        <Route exact path="/account" component={NotFoundPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

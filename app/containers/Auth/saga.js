@@ -1,6 +1,6 @@
 import { takeLatest, put } from 'redux-saga/effects';
 import { push } from 'react-router-redux';
-import { LOGIN_SUCCESS, USER_LOAD } from 'containers/Auth/constants';
+import { LOGIN_SUCCESS, USER_LOAD, USER_LOGOUT } from 'containers/Auth/constants';
 import { loginFail, userCreds, userLoadFail, userLogout } from 'containers/Auth/actions';
 
 export function* setAuthSession(action) {
@@ -8,6 +8,7 @@ export function* setAuthSession(action) {
     const idToken = action.authResult.idToken;
     const accessToken = action.authResult.accessToken;
     const expiresAt = JSON.stringify((action.authResult.expiresIn * 1000) + new Date().getTime());
+    console.log(action.authResult);
     localStorage.setItem('idToken', idToken);
     localStorage.setItem('accessToken', accessToken);
     localStorage.setItem('expiresAt', expiresAt);
@@ -32,10 +33,15 @@ export function* loadAuthSession() {
   }
 }
 
+export function* deleteAuthSession() {
+  localStorage.clear();
+}
+
 // Individual exports for testing
 export default function* authSaga() {
   yield [
     takeLatest(LOGIN_SUCCESS, setAuthSession),
     takeLatest(USER_LOAD, loadAuthSession),
+    takeLatest(USER_LOGOUT, deleteAuthSession),
   ];
 }
