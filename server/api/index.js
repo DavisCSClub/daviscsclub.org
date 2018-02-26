@@ -1,6 +1,9 @@
 const express = require('express');
 const jwt = require('express-jwt');
 const jwksClient = require('jwks-rsa');
+
+const restrictedRoutes = require('./restrictedRoutes');
+const publicRoutes = require('./publicRoutes');
 const router = express.Router();
 
 if (!process.env.AUTH0_DOMAIN || !process.env.AUTH0_AUDIENCE) {
@@ -23,7 +26,7 @@ const checkJWT = jwt({
 });
 
 // JWT access token validation
-router.use(checkJWT, (err, req, res, next) => {
+router.use('/authed', checkJWT, (err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {
     res.status(401).send('Invalid access token');
   } else {
@@ -31,8 +34,9 @@ router.use(checkJWT, (err, req, res, next) => {
   }
 });
 
-router.post('/test', (req, res) => {
-  res.json({ success: true });
-});
+// Load restricted api routes
+router.use('/authed', restrictedRoutes);
+// Load public api routes
+router.use(publicRoutes);
 
 module.exports = router;

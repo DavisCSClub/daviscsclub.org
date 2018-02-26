@@ -2,9 +2,10 @@
 
 require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const logger = require('./logger');
-const api = require('./api/routes');
+const apiRoutes = require('./api');
 
 const argv = require('./argv');
 const port = require('./port');
@@ -15,12 +16,18 @@ const resolve = require('path').resolve;
 const app = express();
 
 
+if (!process.env.MONGODB_URI) {
+  throw new Error('Make sure you have MONGODB_URI in your .env file');
+}
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI);
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 // Parse application/json
 app.use(bodyParser.json());
 // API routes
-app.use('/api', api);
+app.use('/api', apiRoutes);
 
 
 // In production we need to pass these values in instead of relying on webpack

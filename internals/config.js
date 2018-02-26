@@ -32,6 +32,7 @@ const ReactBoilerplate = {
         'express-jwt',
         'jwks-rsa',
         'dotenv',
+        'mongoose',
       ],
 
       /**
