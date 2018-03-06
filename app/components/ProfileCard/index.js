@@ -12,6 +12,7 @@ import faGlobe from '@fortawesome/fontawesome-free-solid/faGlobe';
 
 import './style.css';
 
+// TODO: Use this for officer cards?
 function ProfileCard() {
   return (
     <div className="profile-card">

@@ -12,8 +12,10 @@ const userSchema = new Schema({
   events: [ObjectId],                                   // Events attended
   payments: [String],                                   // 'W18' - paid for these quarters
   name: String,
+  bio: String,
   websiteUrl: String,
   linkedInUrl: String,
+  gitHubUrl: String,
   photoUrl: String,
 });
 

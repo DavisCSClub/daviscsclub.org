@@ -6,6 +6,7 @@ const router = express.Router();
 
 const auth0UserManagement = new Auth0UserManagement();
 
+// This is where new users get added into the database
 // Add promise for current user's Document to req.userDoc
 async function checkGetUserDoc(req, res, next) {
   const userId = req.user.sub;
@@ -17,6 +18,7 @@ async function checkGetUserDoc(req, res, next) {
       userId,
       emails: [auth0UserData.email],
       name: auth0UserData.name,
+      // TODO: Need some kind of default photoUrl
     });
   }
   next();
