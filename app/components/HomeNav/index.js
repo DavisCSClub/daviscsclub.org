@@ -13,7 +13,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
 
 const scrollSpySettings = {
-  items: ['section-home', 'section-about', 'section-membership', 'section-upcoming-events', 'section-officers', 'section-contact', 'section-members'],
+  items: ['section-home', 'section-about', 'section-membership', 'section-upcoming-events', 'section-officers', 'section-contact', 'section-members', 'section-apparel'],
   currentClassName: 'active',
   offset: -200,
 };
@@ -85,6 +85,7 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-officers')} href="#section-officers">Officers</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-contact')} href="#section-contact">Contact Us</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-members')} href="#section-members">Members</a></li>
+              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-apparel')} href="/apparel">Apparel</a></li>
               <li className="nav-item"><a className="nav-link" onClick={this.props.showLogin} href="#login">Login</a></li>
             </Scrollspy>
           </Collapse>
