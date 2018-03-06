@@ -17,9 +17,6 @@ async function checkGetUserDoc(req, res, next) {
       userId,
       emails: [auth0UserData.email],
       name: auth0UserData.name,
-      website: 'net.net',
-      linkedIn: 'url',
-      photoUrl: 'url',
     });
   }
   next();
