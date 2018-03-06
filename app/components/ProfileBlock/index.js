@@ -25,7 +25,7 @@ function ProfileBlock({ name, bio, photoUrl, linkedInUrl, gitHubUrl, websiteUrl 
             {gitHubUrl && <a href={gitHubUrl}><FontAwesomeIcon icon={faGithub} /></a>}
             {websiteUrl && <a href={websiteUrl}><FontAwesomeIcon icon={faGlobe} /></a>}
             <br />
-            <p>{bio}</p>
+            {bio}
           </p>
         </div>
       </div>

@@ -23,6 +23,7 @@ import HomeMembership from 'components/HomeMembership';
 import HomeEvents from 'components/HomeEvents';
 import HomeOfficers from 'components/HomeOfficers';
 import HomeContact from 'components/HomeContact';
+import HomeMembers from 'components/HomeMembers';
 import HomeFooter from 'components/HomeFooter';
 
 import { loadMemberCards } from './actions';
@@ -36,7 +37,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 
   render() {
-    console.log(this.props.membersData);
     return (
       <div>
         <HomeNav showLogin={this.props.auth.showLogin} />
@@ -46,6 +46,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <HomeEvents />
         <HomeOfficers />
         <HomeContact />
+        <HomeMembers membersData={this.props.membersData} />
         <HomeFooter />
       </div>
     );
