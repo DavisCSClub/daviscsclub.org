@@ -16,16 +16,16 @@ const resolve = require('path').resolve;
 const app = express();
 
 // Check for missing required env variables
-// const REQUIRED_ENV = 'MONGODB_URI AUTH0_DOMAIN AUTH0_DCSC_API_AUDIENCE AUTH0_NON_CLIENT_ID AUTH0_NON_CLIENT_SECRET'.split(' ');
-// let MISSING_ENV = '';
-// REQUIRED_ENV.forEach((env) => {
-//   if (!process.env[env]) {
-//     MISSING_ENV += `${env}, `;
-//   }
-// });
-// if (MISSING_ENV) {
-//   throw new Error(`Missing required env var ${MISSING_ENV} in your .env file`);
-// }
+const REQUIRED_ENV = 'MONGODB_URI AUTH0_DOMAIN AUTH0_DCSC_API_AUDIENCE AUTH0_NON_CLIENT_ID AUTH0_NON_CLIENT_SECRET'.split(' ');
+let MISSING_ENV = '';
+REQUIRED_ENV.forEach((env) => {
+  if (!process.env[env]) {
+    MISSING_ENV += `${env}, `;
+  }
+});
+if (MISSING_ENV) {
+  throw new Error(`Missing required env var ${MISSING_ENV} in your .env file`);
+}
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI);
