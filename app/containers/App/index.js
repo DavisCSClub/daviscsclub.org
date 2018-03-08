@@ -17,6 +17,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import ApparelPage from 'containers/ApparelPage/Loadable';
+
 // import AccountPage from 'containers/AccountPage/Loadable';
 
 export default function App({ auth }) {
@@ -25,6 +27,8 @@ export default function App({ auth }) {
       <Switch>
         <Route exact path="/" render={(props) => <HomePage auth={auth} {...props} />} />
         <Route exact path="/account" component={NotFoundPage} />
+        <Route exact path="/apparel" component={ApparelPage} />
+
         <Route component={NotFoundPage} />
       </Switch>
     </div>
