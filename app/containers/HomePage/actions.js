@@ -16,7 +16,7 @@ export function loadMemberCards() {
   };
 }
 
-export function loadMemberCardsSuccuss(membersData) {
+export function loadMemberCardsSuccess(membersData) {
   return {
     type: LOAD_MEMBER_CARDS_SUCCESS,
     membersData,

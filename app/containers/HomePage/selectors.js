@@ -24,8 +24,8 @@ const makeSelectHomePage = () => createSelector(
   (substate) => substate.toJS()
 );
 
-export default makeSelectHomePage;
 export {
   selectHomePageDomain,
+  makeSelectHomePage,
   makeSelectMembersData,
 };

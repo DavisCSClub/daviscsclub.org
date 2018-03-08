@@ -32,10 +32,7 @@ function AuthenticatedRoute({ component: Component, authExpiry, ...rest }) {
 
 AuthenticatedRoute.propTypes = {
   component: PropTypes.func.isRequired,
-  authExpiry: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-  ]).isRequired,
+  authExpiry: PropTypes.string.isRequired,
 
 };
 

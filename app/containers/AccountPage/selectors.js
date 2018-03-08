@@ -9,6 +9,11 @@ const selectAccountPageDomain = (state) => state.get('accountPage');
  * Other specific selectors
  */
 
+const makeSelectUserData = () => createSelector(
+  selectAccountPageDomain,
+  (accountPageState) => accountPageState.get('userData')
+);
+
 
 /**
  * Default selector used by AccountPage
@@ -19,7 +24,8 @@ const makeSelectAccountPage = () => createSelector(
   (substate) => substate.toJS()
 );
 
-export default makeSelectAccountPage;
 export {
   selectAccountPageDomain,
+  makeSelectAccountPage,
+  makeSelectUserData,
 };

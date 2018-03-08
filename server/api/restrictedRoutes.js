@@ -26,7 +26,17 @@ async function checkGetUserDoc(req, res, next) {
 
 router.use(checkGetUserDoc);
 
+// Get user data
 router.get('/userData', (req, res) => {
+  // TODO
+  // console.log(req.user);
+  // console.log(req.userDoc);
+  res.json({ success: true });
+});
+
+// Update user data
+router.post('/userData', (req, res) => {
+  // TODO
   // console.log(req.user);
   // console.log(req.userDoc);
   res.json({ success: true });
