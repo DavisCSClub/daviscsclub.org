@@ -1,13 +1,13 @@
 /**
  *
- * HomeAbout
+ * ApparelAbout
  *
  */
 
 import React from 'react';
 
 
-function HomeAbout() {
+function ApparelAbout() {
   return (
     <div id="apparel-form">
       <section className="pb_section pb_section_v1">
@@ -31,8 +31,8 @@ function HomeAbout() {
   );
 }
 
-HomeAbout.propTypes = {
+ApparelAbout.propTypes = {
 
 };
 
-export default HomeAbout;
+export default ApparelAbout;

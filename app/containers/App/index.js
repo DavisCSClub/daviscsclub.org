@@ -26,7 +26,7 @@ export default function App({ authHandler }) {
     <div>
       <Switch>
         <Route exact path="/" render={(props) => <HomePage authHandler={authHandler} {...props} />} />
-        <Route exact path="/apparel" render={(props) => <ApparelPage authHandler={authHandler} {...props} />} />
+        <Route exact path="/apparel" component={ApparelPage} />
         <AuthenticatedRoute exact path="/account" component={AccountPage} />
         <Route component={NotFoundPage} />
       </Switch>

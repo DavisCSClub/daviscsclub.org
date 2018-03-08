@@ -1,24 +1,15 @@
 /**
  *
- * HomeNav
+ * ApparelNav
  *
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Collapse } from 'reactstrap';
-import Scrollspy from 'react-scrollspy';
-import smoothScroll from 'smoothscroll';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
 
-const scrollSpySettings = {
-  items: ['section-home', 'section-about', 'section-membership', 'section-upcoming-events', 'section-officers', 'section-contact', 'section-members'],
-  currentClassName: 'active',
-  offset: -200,
-};
-
-class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class ApparelNav extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
@@ -56,12 +47,6 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
     });
   }
 
-  handleScrollClick(event, scrollId) {
-    const scrollElement = document.querySelector(scrollId);
-    smoothScroll(scrollElement);
-    event.preventDefault();
-  }
-
   toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -77,17 +62,10 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
             <span><FontAwesomeIcon icon={faBars} /></span>
           </button>
           <Collapse isOpen={!this.state.collapsed} navbar id="boot-navbar">
-            <Scrollspy {...scrollSpySettings} className="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto">
               <li className="nav-item"><a className="nav-link" href="/">Home</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">About</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">Membership</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">Upcoming Events</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">Officers</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">Contact Us</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">Members</a></li>
-              <li className="nav-item"><a className="nav-link" href="/apparel">Apparel</a></li>
-              <li className="nav-item"><a className="nav-link" onClick={this.props.showLogin} href="#login">Login</a></li>
-            </Scrollspy>
+              <li className="nav-item active"><a className="nav-link" href="/apparel">Apparel</a></li>
+            </ul>
           </Collapse>
         </div>
       </nav>
@@ -95,8 +73,8 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
   }
 }
 
-HomeNav.propTypes = {
-  showLogin: PropTypes.func.isRequired,
+ApparelNav.propTypes = {
+
 };
 
-export default HomeNav;
+export default ApparelNav;
