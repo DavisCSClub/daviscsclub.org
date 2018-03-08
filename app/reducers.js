@@ -7,6 +7,7 @@ import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import authReducer from 'containers/Auth/reducer';
 import homePageReducer from 'containers/HomePage/reducer';
+import accountPageReducer from 'containers/AccountPage/reducer';
 
 /*
  * routeReducer
@@ -44,6 +45,7 @@ export default function createReducer(injectedReducers) {
     route: routeReducer,
     auth: authReducer,
     homePage: homePageReducer, // TODO: remove in favor of inject
+    accountPage: accountPageReducer, // TODO: remove in favor of inject
     ...injectedReducers,
   });
 }
