@@ -18,18 +18,15 @@ import { Switch, Route } from 'react-router-dom';
 import AuthenticatedRoute from 'containers/Auth/AuthenticatedRoute';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import ApparelPage from 'containers/ApparelPage/Loadable';
-
 import AccountPage from 'containers/AccountPage/Loadable';
-
+import ApparelPage from 'containers/ApparelPage/Loadable';
 
 export default function App({ authHandler }) {
   return (
     <div>
       <Switch>
-        <Route exact path="/" render={(props) => <HomePage auth={auth} {...props} />} />
-        <Route exact path="/account" component={NotFoundPage} />
-        <Route exact path="/apparel" component={ApparelPage} />
+        <Route exact path="/" render={(props) => <HomePage authHandler={authHandler} {...props} />} />
+        <Route exact path="/apparel" render={(props) => <ApparelPage authHandler={authHandler} {...props} />} />
         <AuthenticatedRoute exact path="/account" component={AccountPage} />
         <Route component={NotFoundPage} />
       </Switch>
