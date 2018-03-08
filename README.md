@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/DavisCSClub/daviscsclub.org/master/app/images/icon-512x512.png" alt="DCSC Website" width="200"></a>
+  <a href="https://daviscsclub.org"><img src="https://raw.githubusercontent.com/DavisCSClub/daviscsclub.org/master/app/images/icon-512x512.png" alt="DCSC Website" width="200"></a>
   <br>
   Davis Computer Science Club Website
   <br>
