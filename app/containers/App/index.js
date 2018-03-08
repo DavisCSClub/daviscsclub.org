@@ -19,12 +19,14 @@ import AuthenticatedRoute from 'containers/Auth/AuthenticatedRoute';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import AccountPage from 'containers/AccountPage/Loadable';
+import ApparelPage from 'containers/ApparelPage/Loadable';
 
 export default function App({ authHandler }) {
   return (
     <div>
       <Switch>
         <Route exact path="/" render={(props) => <HomePage authHandler={authHandler} {...props} />} />
+        <Route exact path="/apparel" component={ApparelPage} />
         <AuthenticatedRoute exact path="/account" component={AccountPage} />
         <Route component={NotFoundPage} />
       </Switch>
