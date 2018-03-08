@@ -9,6 +9,11 @@ const selectAuthDomain = (state) => state.get('auth');
  * Other specific selectors
  */
 
+const makeSelectAuthAccessToken = () => createSelector(
+  selectAuthDomain,
+  (authState) => authState.get('accessToken')
+);
+
 const makeSelectAuthExpiry = () => createSelector(
   selectAuthDomain,
   (authState) => authState.get('expiresAt')
@@ -24,8 +29,9 @@ const makeSelectAuth = () => createSelector(
   (substate) => substate.toJS()
 );
 
-export default makeSelectAuth;
 export {
   selectAuthDomain,
+  makeSelectAuth,
+  makeSelectAuthAccessToken,
   makeSelectAuthExpiry,
 };

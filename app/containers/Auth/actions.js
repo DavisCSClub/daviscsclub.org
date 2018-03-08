@@ -55,11 +55,10 @@ export function loginFail(authResult) {
   };
 }
 
-export function userCreds(idToken, accessToken, expiresAt) {
+export function userCreds(accessToken, expiresAt) {
   return {
     type: USER_CREDS,
     creds: {
-      idToken,
       accessToken,
       expiresAt,
     },

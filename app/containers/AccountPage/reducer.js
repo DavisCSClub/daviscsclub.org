@@ -6,15 +6,17 @@
 
 import { fromJS } from 'immutable';
 import {
-  DEFAULT_ACTION,
+  LOAD_USER_DATA_SUCCESS,
 } from './constants';
 
-const initialState = fromJS({});
+const initialState = fromJS({
+  userData: false,
+});
 
 function accountPageReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case LOAD_USER_DATA_SUCCESS:
+      return state.set('userData', action.userData);
     default:
       return state;
   }
