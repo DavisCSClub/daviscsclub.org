@@ -21,7 +21,7 @@ export default class Auth {
       autoclose: true,
       auth: {
         redirectUrl: window.location.origin, // Redirect to root url after auth
-        responseType: 'token id_token',
+        responseType: 'token',
         audience: AUTH_CONFIG.dcscApiAudience,
       },
       theme: {

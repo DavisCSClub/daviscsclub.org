@@ -11,7 +11,6 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  idToken: '',
   accessToken: '',
   expiresAt: '',
 });
