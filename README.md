@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/DavisCSClub/Website/master/app/images/icon-512x512.png" alt="DCSC Website" width="200"></a>
+  <a href="https://daviscsclub.org"><img src="https://raw.githubusercontent.com/DavisCSClub/daviscsclub.org/master/app/images/icon-512x512.png" alt="DCSC Website" width="200"></a>
   <br>
   Davis Computer Science Club Website
   <br>
@@ -37,10 +37,10 @@ To clone and run this application, you'll need Git, Node.js, and Yarn installed 
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/DavisCSClub/Website
+$ git clone https://github.com/DavisCSClub/daviscsclub.org.git
 
 # Go into the repository
-$ cd website
+$ cd daviscsclub.org
 
 # Create an .env file based on the template
 $ cp .env.example .env

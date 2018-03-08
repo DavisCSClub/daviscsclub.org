@@ -47,13 +47,13 @@ const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
 
 // Init Auth
-const auth = new Auth(store);
+const authHandler = new Auth(store);
 
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App auth={auth} />
+        <App authHandler={authHandler} />
       </ConnectedRouter>
     </Provider>,
     MOUNT_NODE

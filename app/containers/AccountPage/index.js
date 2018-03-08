@@ -8,11 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
-import injectSaga from 'utils/injectSaga';
-import injectReducer from 'utils/injectReducer';
-import reducer from './reducer';
-import saga from './saga';
+import { createStructuredSelector } from 'reselect';
 
 export class AccountPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -25,29 +21,23 @@ export class AccountPage extends React.PureComponent { // eslint-disable-line re
 }
 
 AccountPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
-function mapStateToProps(state) {
-  return {
-    auth: state.auth,
-    accountPage: state.accountPage,
-  };
-}
+const mapStateToProps = createStructuredSelector({
+  // format like membersData: makeSelectMembersData(),
+});
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(/* dispatch */) {
   return {
-    dispatch,
+    // format like loadMemberCards: () => dispatch(loadMemberCards()),
   };
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-const withReducer = injectReducer({ key: 'accountPage', reducer });
-const withSaga = injectSaga({ key: 'accountPage', saga });
+// TODO: Figure out why I can't inject the reducer+saga without breaking the reducer and devtools
 
 export default compose(
-  withReducer,
-  withSaga,
   withConnect,
 )(AccountPage);

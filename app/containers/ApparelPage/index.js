@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import HomeNav from 'components/HomeNav';
+// import HomeNav from 'components/HomeNav';
 
 
 export class ApparelPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
