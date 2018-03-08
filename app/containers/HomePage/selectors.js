@@ -10,9 +10,9 @@ const selectHomePageDomain = (state) => state.get('homePage');
  */
 
 const makeSelectMembersData = () => createSelector(
-   selectHomePageDomain,
-   (homePageState) => homePageState.get('membersData')
- );
+  selectHomePageDomain,
+  (homePageState) => homePageState.get('membersData')
+);
 
 
 /**

@@ -39,7 +39,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   render() {
     return (
       <div>
-        <HomeNav showLogin={this.props.auth.showLogin} />
+        <HomeNav showLogin={this.props.authHandler.showLogin} />
         <HomeHero />
         <HomeAbout />
         <HomeMembership />
@@ -54,7 +54,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 }
 
 HomePage.propTypes = {
-  auth: PropTypes.object.isRequired,
+  authHandler: PropTypes.object.isRequired,
   loadMemberCards: PropTypes.func.isRequired,
   membersData: PropTypes.oneOfType([
     PropTypes.array,

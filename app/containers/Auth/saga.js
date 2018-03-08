@@ -1,5 +1,7 @@
 import { takeLatest, put } from 'redux-saga/effects';
 import { push } from 'react-router-redux';
+
+import Auth from 'containers/Auth/Auth';
 import { LOGIN_SUCCESS, USER_LOAD, USER_LOGOUT } from 'containers/Auth/constants';
 import { loginFail, userCreds, userLoadFail, userLogout } from 'containers/Auth/actions';
 
@@ -12,7 +14,7 @@ export function* setAuthSession(action) {
     localStorage.setItem('accessToken', accessToken);
     localStorage.setItem('expiresAt', expiresAt);
     yield put(userCreds(idToken, accessToken, expiresAt));
-    yield put(push('/account')); // TODO: make sure it works when logging in via members page already
+    yield put(push('/account'));
   } else {
     yield put(loginFail('Received authResult but failed'));
   }
@@ -20,7 +22,7 @@ export function* setAuthSession(action) {
 
 export function* loadAuthSession() {
   const expiresAt = localStorage.getItem('expiresAt');
-  if (expiresAt && expiresAt > new Date().getTime()) {
+  if (expiresAt && !Auth.hasExpired(expiresAt)) {
     const idToken = localStorage.getItem('idToken');
     const accessToken = localStorage.getItem('accessToken');
     yield put(userCreds(idToken, accessToken, expiresAt));

@@ -20,6 +20,7 @@ export default class Auth {
     this.lock = new Auth0Lock(AUTH_CONFIG.clientId, AUTH_CONFIG.domain, {
       autoclose: true,
       auth: {
+        redirectUrl: window.location.origin, // Redirect to root url after auth
         responseType: 'token id_token',
         audience: AUTH_CONFIG.dcscApiAudience,
       },
@@ -50,14 +51,14 @@ export default class Auth {
     this.lock.on('authorization_error', callback.authFail);
   }
 
+  // TODO: Silent authentication if previous credentials/token still valid
   showLogin() {
     // Show the Lock modal
     this.lock.show();
   }
 
-  /* isAuthenticated() {
-    // Check if we are still logged in based on stored token expiry time
-    const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    return new Date().getTime() < expiresAt;
-  } */
+  static hasExpired(expiryDate) {
+    // Check if a token has expired based on the given expiry time
+    return new Date().getTime() >= expiryDate;
+  }
 }
