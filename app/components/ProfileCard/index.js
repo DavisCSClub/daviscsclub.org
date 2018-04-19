@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faLinkedIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn';
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub';
@@ -13,15 +14,15 @@ import faGlobe from '@fortawesome/fontawesome-free-solid/faGlobe';
 import './style.css';
 
 // TODO: Use this for officer cards?
-function ProfileCard() {
+function ProfileCard({ name, bio, linkedInUrl, gitHubUrl, websiteUrl }) {
   return (
     <div className="profile-card">
       <div className="card-header">
-        <a href="http://victory-design.ru/">
+        {/* <a href="http://victory-design.ru/">
           <img src="http://victory-design.ru/sandbox/codepen/profile_card/avatar.svg" alt="test" />
-        </a>
-        <h1>David Jones</h1>
-        <h2>Web Developer</h2>
+        </a> */}
+        <h1>{name}</h1>
+        <h2>{bio}</h2>
       </div>
 
       {/* <div className="profile-bio">
@@ -30,13 +31,13 @@ function ProfileCard() {
 
       <ul className="profile-social-links">
         <li>
-          <a href="https://www.facebook.com/v1ctory"><FontAwesomeIcon icon={faLinkedIn} /></a>
+          {linkedInUrl && <a href={linkedInUrl}><FontAwesomeIcon icon={faLinkedIn} /></a>}
         </li>
         <li>
-          <a href="http://themeforest.net/user/Victory-Design"><FontAwesomeIcon icon={faGithub} /></a>
+          {gitHubUrl && <a href={gitHubUrl}><FontAwesomeIcon icon={faGithub} /></a>}
         </li>
         <li>
-          <a href="https://codepen.io/VictoryDesign/"><FontAwesomeIcon icon={faGlobe} /></a>
+          {websiteUrl && <a href={websiteUrl}><FontAwesomeIcon icon={faGlobe} /></a>}
         </li>
       </ul>
     </div>
@@ -44,7 +45,11 @@ function ProfileCard() {
 }
 
 ProfileCard.propTypes = {
-
+  name: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  linkedInUrl: PropTypes.string.isRequired,
+  gitHubUrl: PropTypes.string.isRequired,
+  websiteUrl: PropTypes.string.isRequired,
 };
 
 export default ProfileCard;

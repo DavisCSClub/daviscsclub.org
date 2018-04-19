@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Masonry from 'react-masonry-component';
 
-import ProfileBlock from 'components/ProfileBlock';
+import ProfileCard from 'components/ProfileCard';
 
 
 // TODO: Make this grid a bit more responsive...
@@ -29,7 +29,7 @@ class HomeMembers extends React.PureComponent {
     let memberBlocks = '';
     if (this.props.membersData) {
       memberBlocks = this.props.membersData.map(({ userId, name, bio, photoUrl, linkedInUrl, gitHubUrl, websiteUrl }) => (
-        <ProfileBlock key={userId} name={name} bio={bio} photoUrl={photoUrl} linkedInUrl={linkedInUrl} gitHubUrl={gitHubUrl} websiteUrl={websiteUrl} />
+        <ProfileCard key={userId} name={name} bio={bio} photoUrl={photoUrl} linkedInUrl={linkedInUrl} gitHubUrl={gitHubUrl} websiteUrl={websiteUrl} />
       ));
     }
 

@@ -27,7 +27,7 @@ export class AccountPage extends React.PureComponent { // eslint-disable-line re
     console.log(this.props.authExpiry);
     return (
       <div>
-        This is the AccountPage container !
+        Coming soon!
       </div>
     );
   }
