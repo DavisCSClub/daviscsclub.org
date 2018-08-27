@@ -1,0 +1,157 @@
+.profile-card h1, h2 {
+    font-weight: 400;
+    margin: 0px 0px 5px 0px;
+}
+.profile-card h1 {
+    font-size: 24px;
+}
+.profile-card h2 {
+    font-size: 16px;
+}
+.profile-card p {
+    margin: 0px;
+    font-size: 14px;
+}
+.profile-card {
+    min-height: 150px; /* temp */
+  	background: #FFFFFF;
+    width: 200px;
+    z-index: 2;
+  	overflow: hidden;
+    opacity: 1;
+    margin: 15px 15px;
+  	-webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  	box-shadow: 0px 3px 6px rgba(0 ,0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+}
+.profile-card .card-header {
+    width: auto;
+    height: auto;
+    padding: 20px 0px;
+    padding-bottom: 10px; /* remove when you have an image*/
+    /*padding: 30px 0px; needed when you have an image*/
+    display: block;
+    float: none;
+    border-right: none;
+    background: #FFFFFF;
+    color: #000000;
+    margin-top: 0px;
+    /*margin-top: -20px; needed when you have an image*/
+    opacity: 1;
+    text-align: center;
+}
+.profile-card .card-header h1 {
+    color: #FF5722;
+}
+.profile-card .card-header a {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 25px 30px;
+}
+.profile-card .card-header a > img {
+    width: 120px;
+    max-width: 100%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: -webkit-box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+}
+.profile-card .card-header a:hover > img {
+    -webkit-box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.profile-card .profile-bio {
+    width: auto;
+    height: auto;
+    display: block;
+    float: none;
+    padding: 15px 0px 30px 0px;
+	  background: #FFFFFF;
+    color: #333333;
+    margin-top: -20px;
+    text-align: center;
+    opacity: 1;
+}
+.profile-social-links {
+    width: 100%;
+    display: block;
+    float: none;
+    margin: 0px;
+    padding: 15px 20px;
+	  background: #FFFFFF;
+    margin-top: -20px;
+    text-align: center;
+    opacity: 1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.profile-social-links li {
+    list-style: none;
+    margin: -5px 0px 0px 0px;
+    padding: 0px;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.profile-social-links li a {
+    display: inline-block;
+    padding: 6px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.profile-social-links li a img {
+    position: relative;
+    z-index: 1;
+}
+.profile-social-links li a:before {
+    display: block;
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 36px;
+    height: 36px;
+    opacity: 1;
+    -webkit-transition: transform 0.4s ease, opacity 1s ease-out;
+    transition: transform 0.4s ease, opacity 1s ease-out;
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.profile-social-links li a:hover:before {
+    -webkit-animation: ripple 1s ease forwards;
+    animation: ripple 1s ease forwards;
+}
+.profile-social-links li a img,
+.profile-social-links li a svg {
+    width: 24px !important;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        transform: scale3d(0, 0, 0);
+    }
+    50%, 100% {
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes ripple {
+    0% {
+        transform: scale3d(0, 0, 0);
+    }
+    50%, 100% {
+        transform: scale3d(1, 1, 1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
