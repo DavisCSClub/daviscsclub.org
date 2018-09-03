@@ -28,8 +28,8 @@ class HomeMembers extends React.PureComponent {
   render() {
     let memberBlocks = '';
     if (this.props.membersData) {
-      memberBlocks = this.props.membersData.map(({ userId, name, bio, photoUrl, linkedInUrl, gitHubUrl, websiteUrl }) => (
-        <ProfileCard key={userId} name={name} bio={bio} photoUrl={photoUrl} linkedInUrl={linkedInUrl} gitHubUrl={gitHubUrl} websiteUrl={websiteUrl} />
+      memberBlocks = this.props.membersData.map(({ name, bio, linkedInUrl, gitHubUrl, websiteUrl }) => (
+        <ProfileCard key={name + bio + linkedInUrl + gitHubUrl + websiteUrl} name={name} bio={bio} linkedInUrl={linkedInUrl} gitHubUrl={gitHubUrl} websiteUrl={websiteUrl} />
       ));
     }
 

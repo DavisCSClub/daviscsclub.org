@@ -51,7 +51,7 @@ export default function PageLayout({ children, title, navigation, footer = <Foot
 }
 
 PageLayout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   navigation: PropTypes.element.isRequired,
   footer: PropTypes.element,

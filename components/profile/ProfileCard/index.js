@@ -18,8 +18,8 @@ function ProfileCard({ name, bio, linkedInUrl, gitHubUrl, websiteUrl }) {
   return (
     <div className="profile-card">
       <div className="card-header">
-        {/* <a href="http://victory-design.ru/">
-          <img src="http://victory-design.ru/sandbox/codepen/profile_card/avatar.svg" alt="test" />
+        {/* <a href="http://website.com/">
+          <img src="http://website.com/image.png" alt="test" />
         </a> */}
         <h1>{name}</h1>
         <h2>{bio}</h2>

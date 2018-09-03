@@ -9,7 +9,7 @@ import './template/helpers.css';
 import './template/style.css';
 
 export default () => (
-  <PageLayout title='DCSC Apparel' navigation=<ApparelNav />>
+  <PageLayout title='DCSC Apparel' navigation={<ApparelNav />}>
     <ApparelHero />
     <ApparelAbout />
   </PageLayout>
