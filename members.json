@@ -28,13 +28,6 @@
     "websiteUrl": "#"
   },
   {
-    "name": "Dustin Cai",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
     "name": "Brandon Lau",
     "bio": "Student",
     "linkedInUrl": "#",
@@ -42,28 +35,7 @@
     "websiteUrl": "#"
   },
   {
-    "name": "Alicia Siu",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
     "name": "Elias Heffan",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
-    "name": "Vivienne Zing",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
-    "name": "Katie Kwak",
     "bio": "Student",
     "linkedInUrl": "#",
     "gitHubUrl": "#",
@@ -210,21 +182,7 @@
     "websiteUrl": "#"
   },
   {
-    "name": "Maxim Chiao",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
     "name": "Jessica Ma",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
-    "name": "Kevin Lee",
     "bio": "Student",
     "linkedInUrl": "#",
     "gitHubUrl": "#",
@@ -253,13 +211,6 @@
   },
   {
     "name": "Cindy Mylinh Tran",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
-    "name": "Brandon Lau",
     "bio": "Student",
     "linkedInUrl": "#",
     "gitHubUrl": "#",
@@ -364,17 +315,17 @@
     "websiteUrl": "#"
   },
   {
-    "name": "Kimberly Lee",
-    "bio": "Student",
-    "linkedInUrl": "#",
-    "gitHubUrl": "#",
-    "websiteUrl": "#"
-  },
-  {
     "name": "Nikhita Battula",
     "bio": "Student",
     "linkedInUrl": "#",
     "gitHubUrl": "#",
     "websiteUrl": "#"
+  },
+  { 
+    "name": "Corey Mason",
+    "bio": "Former Officer & Webmaster",
+    "linkedInUrl": "https://linkedin.com/in/corey-mason",
+    "gitHubUrl": "https://github.com/coreymason",
+    "websiteUrl": "https://coreysmason.com"
   }
 ]
