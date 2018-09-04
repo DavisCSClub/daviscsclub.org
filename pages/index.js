@@ -17,7 +17,7 @@ import './template/style.css';
 export default class HomePage extends React.Component {
   static async getInitialProps() {
     // This data may be moved online at a future date
-    const membersData = require('./members.json') || false; // eslint-disable-line global-require
+    const membersData = require('../members.json') || false; // eslint-disable-line global-require
     return { membersData };
   }
 
