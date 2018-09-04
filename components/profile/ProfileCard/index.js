@@ -31,13 +31,13 @@ function ProfileCard({ name, bio, linkedInUrl, gitHubUrl, websiteUrl }) {
 
       <ul className="profile-social-links">
         <li>
-          {linkedInUrl && <a href={linkedInUrl}><FontAwesomeIcon icon={faLinkedIn} /></a>}
+          <a className={linkedInUrl === '#' ? 'nolink' : ''} href={linkedInUrl}><FontAwesomeIcon icon={faLinkedIn} /></a>
         </li>
         <li>
-          {gitHubUrl && <a href={gitHubUrl}><FontAwesomeIcon icon={faGithub} /></a>}
+          <a className={gitHubUrl === '#' ? 'nolink' : ''} href={gitHubUrl}><FontAwesomeIcon icon={faGithub} /></a>
         </li>
         <li>
-          {websiteUrl && <a href={websiteUrl}><FontAwesomeIcon icon={faGlobe} /></a>}
+          <a className={websiteUrl === '#' ? 'nolink' : ''} href={websiteUrl}><FontAwesomeIcon icon={faGlobe} /></a>
         </li>
       </ul>
     </div>

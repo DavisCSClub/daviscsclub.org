@@ -14,14 +14,14 @@
 }
 .profile-card {
     min-height: 150px; /* temp */
-  	background: #FFFFFF;
+    background: #FFFFFF;
     width: 200px;
     z-index: 2;
-  	overflow: hidden;
+    overflow: hidden;
     opacity: 1;
     margin: 15px 15px;
-  	-webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-  	box-shadow: 0px 3px 6px rgba(0 ,0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 3px 6px rgba(0 ,0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
 }
 .profile-card .card-header {
     width: auto;
@@ -68,7 +68,7 @@
     display: block;
     float: none;
     padding: 15px 0px 30px 0px;
-	  background: #FFFFFF;
+    background: #FFFFFF;
     color: #333333;
     margin-top: -20px;
     text-align: center;
@@ -80,7 +80,7 @@
     float: none;
     margin: 0px;
     padding: 15px 20px;
-	  background: #FFFFFF;
+    background: #FFFFFF;
     margin-top: -20px;
     text-align: center;
     opacity: 1;
@@ -131,6 +131,10 @@
 .profile-social-links li a img,
 .profile-social-links li a svg {
     width: 24px !important;
+}
+
+.profile-social-links li a.nolink {
+    color: #95a5a6;
 }
 
 @-webkit-keyframes ripple {

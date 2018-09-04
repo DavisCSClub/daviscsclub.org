@@ -18,6 +18,7 @@ export default class HomePage extends React.Component {
   static async getInitialProps() {
     // This data may be moved online at a future date
     const membersData = require('../members.json') || false; // eslint-disable-line global-require
+    membersData.sort((a, b) => a.name < b.name ? -1 : 1);
     return { membersData };
   }
 
