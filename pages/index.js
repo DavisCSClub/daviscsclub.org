@@ -27,11 +27,11 @@ export default class HomePage extends React.Component {
       <PageLayout title='DCSC' navigation={<HomeNav />}>
         <HomeHero />
         <HomeAbout />
-        <HomeMembership />
+        {/*<HomeMembership />*/}
         {/* <HomeEvents />
         <HomeOfficers /> */}
         <HomeContact />
-        <HomeMembers membersData={this.props.membersData} />
+        {/*<HomeMembers membersData={this.props.membersData} />*/}
       </PageLayout>
     );
   }
