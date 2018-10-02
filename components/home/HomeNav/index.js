@@ -77,11 +77,11 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
             <Scrollspy {...scrollSpySettings} className="navbar-nav ml-auto">
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-home')} href="#section-home">Home</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-about')} href="#section-about">About</a></li>
-              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-membership')} href="#section-membership">Membership</a></li>
+              {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-membership')} href="#section-membership">Membership</a></li>*/}
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-upcoming-events')} href="#section-upcoming-events">Upcoming Events</a></li>
-              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-officers')} href="#section-officers">Officers</a></li>
+              {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-officers')} href="#section-officers">Officers</a></li>*/}
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-contact')} href="#section-contact">Contact Us</a></li>
-              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-members')} href="#section-members">Members</a></li>
+              {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-members')} href="#section-members">Members</a></li>*/}
               {/*<li className="nav-item"><a className="nav-link" href="/apparel">Apparel</a></li>*/}
             </Scrollspy>
           </Collapse>
