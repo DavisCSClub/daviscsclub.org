@@ -4,5 +4,6 @@ module.exports = withCSS({
   exportPathMap: async () => ({
     '/': { page: '/' },
     '/apparel': { page: '/apparel' },
+    '/signin' : { page: '/signin' },
   }),
 });
