@@ -5,6 +5,6 @@ module.exports = withCSS({
     '/': { page: '/' },
     '/apparel': { page: '/apparel' },
     '/signin' : { page: '/signin' },
-    '/bitByte' : { page: '/bitByte' },
+    '/bitbyte' : { page: '/bitbyte' },
   }),
 });
