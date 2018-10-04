@@ -80,6 +80,7 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
               {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-membership')} href="#section-membership">Membership</a></li>*/}
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-upcoming-events')} href="#section-upcoming-events">Upcoming Events</a></li>
               {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-officers')} href="#section-officers">Officers</a></li>*/}
+              <li className="nav-item"><a className="nav-link" href="/bitbyte">BitByte</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-contact')} href="#section-contact">Contact Us</a></li>
               {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-members')} href="#section-members">Members</a></li>*/}
               {/*<li className="nav-item"><a className="nav-link" href="/apparel">Apparel</a></li>*/}
