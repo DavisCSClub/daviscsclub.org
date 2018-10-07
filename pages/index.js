@@ -5,6 +5,7 @@ import PageLayout from '../components/shared/pageLayout';
 import HomeNav from '../components/home/HomeNav';
 import HomeHero from '../components/home/HomeHero';
 import HomeAbout from '../components/home/HomeAbout';
+import HomeBitByte from '../components/home/HomeBitByte';
 import HomeMembership from '../components/home/HomeMembership';
 // import HomeEvents from '../components/home/HomeEvents';
 // import HomeOfficers from '../components/home/HomeOfficers';
@@ -27,6 +28,7 @@ export default class HomePage extends React.Component {
       <PageLayout title='DCSC' navigation={<HomeNav />}>
         <HomeHero />
         <HomeAbout />
+        <HomeBitByte />
         {/*<HomeMembership />*/}
         {/* <HomeEvents />
         <HomeOfficers /> */}
