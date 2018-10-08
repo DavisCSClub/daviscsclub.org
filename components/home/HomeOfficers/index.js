@@ -13,8 +13,8 @@ function HomeOfficers() {
       <div className="container-fluid">
         <div className="row justify-content-md-center text-center mb-5">
           <div className="col-lg-7">
-            <h2 className="mt-0 heading-border-top light font-weight-normal text-white">DCSC Officers</h2>
-            <p className="text-white">Our 2017-2018 Board</p>
+            <h2 className="mt-0 heading-border-top light font-weight-normal text-white">Meet the Team</h2>
+            <p className="text-white">Our 2018-2019 Board</p>
           </div>
         </div>
 
@@ -24,7 +24,7 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Sam Tsoi</h4>
+                <h4 className="card-title mt-0 mb-2">Bryan Ngo</h4>
                 <h6 className="card-subtitle mb-2">President</h6>
               </div>
             </div>
@@ -33,7 +33,7 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Andrew Cope</h4>
+                <h4 className="card-title mt-0 mb-2">Jason Lee</h4>
                 <h6 className="card-subtitle mb-2">Vice President</h6>
               </div>
             </div>
@@ -42,7 +42,7 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Bryan Ngo</h4>
+                <h4 className="card-title mt-0 mb-2">Shivani Bhushan</h4>
                 <h6 className="card-subtitle mb-2">Treasurer</h6>
               </div>
             </div>
@@ -51,7 +51,7 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Nikita Andrikanis</h4>
+                <h4 className="card-title mt-0 mb-2">Ynna Lecitona</h4>
                 <h6 className="card-subtitle mb-2">Secretary</h6>
               </div>
             </div>
@@ -63,17 +63,8 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Corey Mason</h4>
-                <h6 className="card-subtitle mb-2">Director of Technology</h6>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card text-center pb_card_v1 mb-4">
-              <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
-              <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Prajakta Surve</h4>
-                <h6 className="card-subtitle mb-2">Director of Design</h6>
+                <h4 className="card-title mt-0 mb-2">Shivam Desai</h4>
+                <h6 className="card-subtitle mb-2">Co-Director of Technology</h6>
               </div>
             </div>
           </div>
@@ -82,7 +73,7 @@ function HomeOfficers() {
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
                 <h4 className="card-title mt-0 mb-2">Peter Kim</h4>
-                <h6 className="card-subtitle mb-2">Director of Public Relations</h6>
+                <h6 className="card-subtitle mb-2">Co-Director of Technology</h6>
               </div>
             </div>
           </div>
@@ -90,8 +81,8 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Alisha Nanda</h4>
-                <h6 className="card-subtitle mb-2">Pragmatic Programming Chair</h6>
+                <h4 className="card-title mt-0 mb-2">Allison Tearjen</h4>
+                <h6 className="card-subtitle mb-2">External Outreach Chair</h6>
               </div>
             </div>
           </div>
@@ -99,8 +90,17 @@ function HomeOfficers() {
             <div className="card text-center pb_card_v1 mb-4">
               <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
               <div className="card-body">
-                <h4 className="card-title mt-0 mb-2">Jeffrey Warner</h4>
-                <h6 className="card-subtitle mb-2">Professional Development Chair</h6>
+                <h4 className="card-title mt-0 mb-2">Sethmi (Mia) Dharmasiri</h4>
+                <h6 className="card-subtitle mb-2">Events Chair</h6>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card text-center pb_card_v1 mb-4">
+              <img className="card-img-top rounded-circle w-50 mx-auto" src="static/images/generic.png" alt="Officer portrait" />
+              <div className="card-body">
+                <h4 className="card-title mt-0 mb-2">Julie Deng</h4>
+                <h6 className="card-subtitle mb-2">Public Relations/Design Chair</h6>
               </div>
             </div>
           </div>
