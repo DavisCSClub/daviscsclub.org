@@ -8,7 +8,7 @@ import HomeAbout from '../components/home/HomeAbout';
 import HomeBitByte from '../components/home/HomeBitByte';
 import HomeMembership from '../components/home/HomeMembership';
 // import HomeEvents from '../components/home/HomeEvents';
-// import HomeOfficers from '../components/home/HomeOfficers';
+import HomeOfficers from '../components/home/HomeOfficers';
 import HomeContact from '../components/home/HomeContact';
 import HomeMembers from '../components/home/HomeMembers';
 
@@ -28,11 +28,11 @@ export default class HomePage extends React.Component {
       <PageLayout title='DCSC' navigation={<HomeNav />}>
         <HomeHero />
         <HomeAbout />
+        {/* <HomeEvents />*/}
+        <HomeOfficers />
         <HomeBitByte />
-        {/*<HomeMembership />*/}
-        {/* <HomeEvents />
-        <HomeOfficers /> */}
         <HomeContact />
+        {/*<HomeMembership />*/}
         {/*<HomeMembers membersData={this.props.membersData} />*/}
       </PageLayout>
     );
