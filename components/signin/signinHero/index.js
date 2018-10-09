@@ -17,7 +17,7 @@ class signinHero extends React.PureComponent {
   render() {
     // Background-image should be around 1900x1200 ratio
     return (
-      <section className="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style={{ backgroundImage: 'url(static/images/who2.jpg)' }} id="section-home">
+      <section className="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style={{ backgroundImage: 'url(../static/images/who2.jpg)' }} id="section-home">
         <div className="container">
           <div className="row align-items-center justify-content-end">
             <div className="col-md-6  order-md-1">
