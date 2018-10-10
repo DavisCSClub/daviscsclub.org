@@ -14,6 +14,7 @@ import HomeMembers from '../components/home/HomeMembers';
 
 import './template/helpers.css';
 import './template/style.css';
+import HomeEventsBanner from '../components/home/HomeEventsBanner';
 
 export default class HomePage extends React.Component {
   static async getInitialProps() {
@@ -31,6 +32,7 @@ export default class HomePage extends React.Component {
         {/* <HomeEvents />*/}
         <HomeOfficers />
         <HomeBitByte />
+        <HomeEventsBanner/>
         <HomeContact />
         {/*<HomeMembership />*/}
         {/*<HomeMembers membersData={this.props.membersData} />*/}
