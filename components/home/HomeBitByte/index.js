@@ -20,7 +20,6 @@ function HomeBitByte() {
               <h2 className="mt-0 heading-border-top mb-3">BitByte</h2>
               <p>The Davis Computer Science Club is proud to announce the start of our Bit Byte mentorship program! If you’re looking for guidance on your career, looking to pass down knowledge, or just looking for a sense of community, this program is perfect for you!</p>
               <p>As a Bit (Mentee), you would have the chance to receive help and guidance from a more experienced student, whether it be with internships, career, or classes! As a Byte (Mentor), you would be able to spread your wisdom and pass down your knowledge from over the years. You have a chance to lead new students and act as a valuable source of information on college life. Don't miss out!</p>
-              <a href="/bitbyte">Sign up here!</a>
             </div>
             <div className="col-lg-7">
               <div className="images">
