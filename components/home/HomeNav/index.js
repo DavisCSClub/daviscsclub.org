@@ -12,7 +12,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
 
 const scrollSpySettings = {
-  items: ['section-home', 'section-about', 'section-membership', 'section-upcoming-events', 'section-officers', 'section-contact', 'section-members'],
+  items: ['section-home', 'section-about', 'section-upcoming-events', 'section-officers', 'section-bitbyte', 'section-contact'],
   currentClassName: 'active',
   offset: -200,
 };
