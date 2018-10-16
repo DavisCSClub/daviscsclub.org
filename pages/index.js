@@ -29,10 +29,9 @@ export default class HomePage extends React.Component {
       <PageLayout title='DCSC' navigation={<HomeNav />}>
         <HomeHero />
         <HomeAbout />
-        {/* <HomeEvents />*/}
         <HomeOfficers />
         <HomeBitByte />
-        <HomeEventsBanner/>
+        <HomeEventsBanner />
         <HomeContact />
         {/*<HomeMembership />*/}
         {/*<HomeMembers membersData={this.props.membersData} />*/}

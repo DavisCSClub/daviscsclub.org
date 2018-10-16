@@ -12,7 +12,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
 
 const scrollSpySettings = {
-  items: ['section-home', 'section-about', 'section-upcoming-events', 'section-officers', 'section-bitbyte', 'section-contact'],
+  items: ['section-home', 'section-about', 'section-officers', 'section-bitbyte', 'section-events', 'section-contact'],
   currentClassName: 'active',
   offset: -200,
 };
@@ -77,13 +77,14 @@ class HomeNav extends React.PureComponent { // eslint-disable-line react/prefer-
             <Scrollspy {...scrollSpySettings} className="navbar-nav ml-auto">
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-home')} href="#section-home">Home</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-about')} href="#section-about">About</a></li>
-              {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-membership')} href="#section-membership">Membership</a></li>*/}
-              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-upcoming-events')} href="#section-events">Upcoming Events</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-officers')} href="#section-officers">Officers</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-bitbyte')} href="#section-bitbyte">BitByte</a></li>
+              <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-events')} href="#section-events">Upcoming Events</a></li>
               <li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-contact')} href="#section-contact">Contact Us</a></li>
+              <li className="nav-item"><a className="nav-link" href="/signin">Sign In</a></li>
               {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-members')} href="#section-members">Members</a></li>*/}
               {/*<li className="nav-item"><a className="nav-link" href="/apparel">Apparel</a></li>*/}
+              {/*<li className="nav-item"><a className="nav-link" onClick={(event) => this.handleScrollClick(event, '#section-membership')} href="#section-membership">Membership</a></li>*/}
             </Scrollspy>
           </Collapse>
         </div>
