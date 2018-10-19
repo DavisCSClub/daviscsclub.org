@@ -15,8 +15,8 @@ function signinAbout() {
           <div className="row">
             <div className="col-lg-7">
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSe_efYkv9bCxbza7C-yNdnlAOVSiHEU4rftWZceJsHzlp1tEg/viewform"
-                width="640" height="1128" frameBorder="0" marginHeight="0" marginWidth="0">Loading...
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdVhX2RQEbErS9iS8CgPBDQW4DWhKaQUwVaSBi4nNf3pzq0vA/viewform?embedded=true"
+                width="1076" height="1076" frameBorder="0" marginHeight="0" marginWidth="0">Loading...
               </iframe>
             </div>
           </div>
